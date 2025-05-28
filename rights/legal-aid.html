@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessing Legal Aid | Community Resources Hub</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #2c5aa0 0%, #1e3a5f 100%);
+            color: white;
+            padding: 40px 0;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .back-link {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            font-size: 0.9rem;
+            padding: 8px 16px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+
+        .back-link:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+        }
+
+        main {
+            padding: 50px 0;
+        }
+
+        .quick-resources {
+            background: #e8f4f8;
+            border-left: 5px solid #2c5aa0;
+            padding: 25px;
+            margin-bottom: 40px;
+            border-radius: 8px;
+        }
+
+        .quick-resources h2 {
+            color: #2c5aa0;
+            margin-bottom: 20px;
+            font-size: 1.4rem;
+        }
+
+        .resource-links {
+            display: grid;
+            gap: 15px;
+        }
+
+        .resource-link {
+            display: block;
+            background: white;
+            padding: 15px 20px;
+            text-decoration: none;
+            color: #333;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            border-left: 3px solid #2c5aa0;
+        }
+
+        .resource-link:hover {
+            transform: translateX(5px);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .resource-link strong {
+            display: block;
+            color: #2c5aa0;
+            margin-bottom: 5px;
+        }
+
+        .content-section {
+            background: white;
+            padding: 40px;
+            margin-bottom: 30px;
+            border-radius: 12px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .content-section h2 {
+            color: #2c5aa0;
+            font-size: 1.6rem;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e9ecef;
+        }
+
+        .content-section h3 {
+            color: #1e3a5f;
+            font-size: 1.2rem;
+            margin: 25px 0 15px 0;
+        }
+
+        .law-category {
+            margin-bottom: 35px;
+        }
+
+        .law-category h4 {
+            color: #2c5aa0;
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        ul {
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        li {
+            margin-bottom: 12px;
+        }
+
+        strong {
+            color: #1e3a5f;
+        }
+
+        .highlight-box {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 25px 0;
+        }
+
+        .highlight-box h4 {
+            color: #856404;
+            margin-bottom: 10px;
+        }
+
+        .emergency-contact {
+            background: #f8d7da;
+            border: 1px solid #f5c6cb;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 25px 0;
+            text-align: center;
+        }
+
+        .emergency-contact h4 {
+            color: #721c24;
+            margin-bottom: 10px;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .contact-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            border: 2px solid #e9ecef;
+        }
+
+        .contact-card h4 {
+            color: #2c5aa0;
+            margin-bottom: 10px;
+        }
+
+        .contact-card a {
+            color: #2c5aa0;
+            text-decoration: none;
+        }
+
+        .contact-card a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .content-section {
+                padding: 30px 20px;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="../index.html" class="back-link">← Back to Resources</a>
+                <h1>Accessing Legal Aid</h1>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="quick-resources">
+                <h2>🚀 Quick Access to Legal Help</h2>
+                <div class="resource-links">
+                    <a href="https://www.ohiolegalhelp.org/find-your-legal-aid" class="resource-link" target="_blank" rel="noopener">
+                        <strong>Find Your Local Legal Aid Office</strong>
+                        Ohio Legal Help directory of all legal aid organizations
+                    </a>
+                    <a href="https://www.ohiojusticefoundation.org/ohios-legal-aids-2/" class="resource-link" target="_blank" rel="noopener">
+                        <strong>Ohio Justice Foundation Directory</strong>
+                        Complete list of Ohio's legal aid organizations
+                    </a>
+                    <a href="https://www.ohiolegalhelp.org/" class="resource-link" target="_blank" rel="noopener">
+                        <strong>Ohio Legal Help</strong>
+                        Free legal information and resources online
+                    </a>
+                </div>
+            </section>
+
+            <div class="emergency-contact">
+                <h4>⚠️ Need Immediate Legal Help?</h4>
+                <p>If you're facing an emergency legal situation (domestic violence, eviction notice, etc.), contact your local legal aid office immediately or call 211 for emergency assistance.</p>
+            </div>
+
+            <section class="content-section">
+                <h2>Understanding Your Legal Rights in Ohio</h2>
+                <p>Knowing your rights under Ohio law is the first step in protecting yourself and your family. Here are key areas where you may need legal assistance:</p>
+
+                <div class="law-category">
+                    <h3>1. Family Law</h3>
+                    <h4>Parental Rights:</h4>
+                    <ul>
+                        <li><strong>Married Parents:</strong> Both mothers and fathers have equal rights to legal and residential custody of their children when married at the time of birth</li>
+                        <li><strong>Unmarried Parents:</strong> The mother typically has sole custody until a court order designates otherwise</li>
+                    </ul>
+                    
+                    <h4>Child Support:</h4>
+                    <ul>
+                        <li>Ohio uses an <strong>Income Shares Model</strong> that considers both parents' incomes</li>
+                        <li>Designed to ensure children receive the same financial support as if parents lived together</li>
+                    </ul>
+                </div>
+
+                <div class="law-category">
+                    <h3>2. Housing Rights</h3>
+                    <h4>Landlord Obligations:</h4>
+                    <ul>
+                        <li>Provide a <strong>habitable and safe living environment</strong></li>
+                        <li>Comply with housing codes</li>
+                        <li>Provide necessary services (water, heat, trash removal)</li>
+                        <li>Give at least <strong>24-hour notice</strong> before entering (except emergencies)</li>
+                    </ul>
+                    
+                    <h4>Tenant Rights:</h4>
+                    <ul>
+                        <li>Right to a safe and habitable dwelling</li>
+                        <li>Right to complain about violations without retaliation</li>
+                        <li>Right to join with other tenants</li>
+                        <li>Protection from improper eviction procedures</li>
+                    </ul>
+                </div>
+
+                <div class="highlight-box">
+                    <h4>🏠 Facing Eviction?</h4>
+                    <p>Landlords must follow specific legal procedures for eviction. Contact legal aid immediately if you receive an eviction notice to understand your rights and options.</p>
+                </div>
+
+                <div class="law-category">
+                    <h3>3. Consumer Protection</h3>
+                    <h4>Consumer Sales Practices Act:</h4>
+                    <ul>
+                        <li>Protects against <strong>unfair, deceptive, or unconscionable practices</strong></li>
+                        <li>Ensures businesses engage in fair and honest practices</li>
+                        <li>Provides remedies for consumer fraud</li>
+                    </ul>
+                    
+                    <h4>Vehicle Purchase Protection:</h4>
+                    <ul>
+                        <li>Right to cancel vehicle purchase if title isn't delivered within required timeframe</li>
+                        <li>Protection under the Certificate of Motor Vehicle Title Act</li>
+                    </ul>
+                </div>
+
+                <div class="law-category">
+                    <h3>4. Labor & Employment Law</h3>
+                    <h4>Minimum Wage (as of January 1, 2025):</h4>
+                    <ul>
+                        <li><strong>Non-tipped employees:</strong> $10.70 per hour</li>
+                        <li><strong>Tipped employees:</strong> $5.35 per hour</li>
+                    </ul>
+                    
+                    <h4>Workplace Rights:</h4>
+                    <ul>
+                        <li>Protection from discrimination based on protected characteristics</li>
+                        <li>Right to file wage complaints with Ohio Department of Commerce</li>
+                        <li>Access to Ohio Civil Rights Commission for discrimination issues</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2>How to Access Legal Aid in Ohio</h2>
+                <p>Legal aid organizations provide free legal help to qualifying individuals and families. Here's how to access these services:</p>
+
+                <h3>Finding Legal Aid</h3>
+                <ul>
+                    <li><strong>Start with your local Legal Aid Society</strong> - they can assess your eligibility and connect you with appropriate services</li>
+                    <li><strong>Use online directories</strong> to find the legal aid office serving your area</li>
+                    <li><strong>Contact Advocates for Basic Legal Equality (ABLE)</strong> for additional services</li>
+                </ul>
+
+                <div class="highlight-box">
+                    <h4>🚌 Ohio Justice Bus</h4>
+                    <p>Look for the mobile legal aid office in your community! The Ohio Justice Bus brings free legal services and technology access directly to neighborhoods.</p>
+                </div>
+
+                <h3>What Legal Aid Can Help With</h3>
+                <ul>
+                    <li>Housing issues (evictions, landlord problems, housing discrimination)</li>
+                    <li>Family law matters (custody, divorce, domestic violence)</li>
+                    <li>Public benefits applications and appeals</li>
+                    <li>Consumer protection issues</li>
+                    <li>Employment problems and wage theft</li>
+                    <li>Healthcare access and insurance issues</li>
+                </ul>
+
+                <div class="contact-grid">
+                    <div class="contact-card">
+                        <h4>📞 Need Help Now?</h4>
+                        <p>Call <strong>2-1-1</strong> for immediate assistance connecting to legal and community resources</p>
+                    </div>
+                    <div class="contact-card">
+                        <h4>💻 Online Resources</h4>
+                        <p><a href="https://www.ohiolegalhelp.org/" target="_blank" rel="noopener">Ohio Legal Help</a><br>Free legal information and forms</p>
+                    </div>
+                    <div class="contact-card">
+                        <h4>🏢 Local Office</h4>
+                        <p>Use the directory links above to find your nearest legal aid office</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Needs Resources | Community Resources Hub</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #2c5aa0 0%, #1e3a5f 100%);
+            color: white;
+            padding: 40px 0;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .back-link {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            font-size: 0.9rem;
+            padding: 8px 16px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+
+        .back-link:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+        }
+
+        main {
+            padding: 50px 0;
+        }
+
+        .quick-resources {
+            background: #e8f5e8;
+            border-left: 5px solid #28a745;
+            padding: 25px;
+            margin-bottom: 40px;
+            border-radius: 8px;
+        }
+
+        .quick-resources h2 {
+            color: #155724;
+            margin-bottom: 20px;
+            font-size: 1.4rem;
+        }
+
+        .resource-links {
+            display: grid;
+            gap: 15px;
+        }
+
+        .resource-link {
+            display: block;
+            background: white;
+            padding: 20px;
+            text-decoration: none;
+            color: #333;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            border-left: 4px solid #28a745;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .resource-link:hover {
+            transform: translateX(8px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .resource-link strong {
+            display: block;
+            color: #28a745;
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+
+        .resource-link .description {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .content-section {
+            background: white;
+            padding: 40px;
+            margin-bottom: 30px;
+            border-radius: 12px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .content-section h2 {
+            color: #2c5aa0;
+            font-size: 1.6rem;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e9ecef;
+        }
+
+        .content-section h3 {
+            color: #1e3a5f;
+            font-size: 1.3rem;
+            margin: 30px 0 20px 0;
+        }
+
+        .needs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+
+        .need-category {
+            background: #f8f9fa;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            padding: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .need-category:hover {
+            border-color: #2c5aa0;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .need-category h4 {
+            color: #2c5aa0;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .icon {
+            width: 28px;
+            height: 28px;
+            background: #2c5aa0;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 16px;
+        }
+
+        .need-category ul {
+            margin-left: 0;
+            list-style: none;
+        }
+
+        .need-category li {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .need-category li:before {
+            content: "•";
+            color: #2c5aa0;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .emergency-box {
+            background: #fff3cd;
+            border: 2px solid #ffeaa7;
+            border-radius: 8px;
+            padding: 25px;
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .emergency-box h3 {
+            color: #856404;
+            margin-bottom: 15px;
+            margin-top: 0;
+        }
+
+        .emergency-box p {
+            color: #856404;
+            font-size: 1.1rem;
+        }
+
+        .emergency-contacts {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .emergency-contact {
+            background: white;
+            padding: 15px;
+            border-radius: 6px;
+            text-align: center;
+        }
+
+        .emergency-contact strong {
+            display: block;
+            color: #856404;
+            margin-bottom: 5px;
+        }
+
+        .tip-box {
+            background: #d1ecf1;
+            border-left: 5px solid #17a2b8;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 8px;
+        }
+
+        .tip-box h4 {
+            color: #0c5460;
+            margin-bottom: 10px;
+        }
+
+        .tip-box p {
+            color: #0c5460;
+        }
+
+        .special-programs {
+            background: #e8f4f8;
+            border: 2px solid #bee5eb;
+            border-radius: 8px;
+            padding: 25px;
+            margin: 30px 0;
+        }
+
+        .special-programs h3 {
+            color: #0c5460;
+            margin-bottom: 20px;
+            margin-top: 0;
+        }
+
+        .program-highlight {
+            background: white;
+            padding: 20px;
+            border-radius: 6px;
+            margin: 15px 0;
+            border-left: 4px solid #17a2b8;
+        }
+
+        .program-highlight h4 {
+            color: #0c5460;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .content-section {
+                padding: 30px 20px;
+            }
+
+            .needs-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .need-category {
+                padding: 20px 15px;
+            }
+
+            .emergency-contacts {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="../index.html" class="back-link">← Back to Resources</a>
+                <h1>Basic Needs Resources</h1>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="quick-resources">
+                <h2>🔍 Find Resources in Your Area</h2>
+                <div class="resource-links">
+                    <a href="https://childrenandyouth.ohio.gov/for-families" class="resource-link" target="_blank" rel="noopener">
+                        <strong>Ohio Children & Youth Resources</strong>
+                        <div class="description">Find a wide variety of resources for families in your area through the Ohio Department of Children and Youth</div>
+                    </a>
+                    <a href="https://brightbeginningskids.knack.com/communityresourcedirectories#questionnaire/" class="resource-link" target="_blank" rel="noopener">
+                        <strong>Bright Beginnings Resource Directory</strong>
+                        <div class="description">Find resources specifically for families with children under 6 years old</div>
+                    </a>
+                    <a href="https://oacaa.org/find-an-agency/" class="resource-link" target="_blank" rel="noopener">
+                        <strong>Community Action Agencies</strong>
+                        <div class="description">Find your local community action agency for comprehensive support services</div>
+                    </a>
+                </div>
+            </section>
+
+            <div class="emergency-box">
+                <h3>🚨 Need Immediate Help?</h3>
+                <p>If you're facing a crisis or emergency need, don't wait - reach out for help right away</p>
+                <div class="emergency-contacts">
+                    <div class="emergency-contact">
+                        <strong>2-1-1</strong>
+                        <span>24/7 helpline for all services</span>
+                    </div>
+                    <div class="emergency-contact">
+                        <strong>Emergency Food</strong>
+                        <span>Contact local food banks</span>
+                    </div>
+                    <div class="emergency-contact">
+                        <strong>Crisis Shelter</strong>
+                        <span>Call 2-1-1 for immediate housing</span>
+                    </div>
+                </div>
+            </div>
+
+            <section class="content-section">
+                <h2>Essential Basic Needs Support</h2>
+                <p>Everyone deserves access to basic necessities. If you're struggling to meet your family's fundamental needs, there are resources available to help. Below are common areas where assistance is available in our community.</p>
+
+                <div class="needs-grid">
+                    <div class="need-category">
+                        <h4>
+                            <span class="icon">🍽️</span>
+                            Food & Nutrition
+                        </h4>
+                        <ul>
+                            <li>Food banks and pantries</li>
+                            <li>SNAP benefits (food stamps)</li>
+                            <li>WIC program (women, infants, children)</li>
+                            <li>School meal programs</li>
+                            <li>Senior meal programs</li>
+                            <li>Community kitchens and soup kitchens</li>
+                            <li>Mobile food distributions</li>
+                        </ul>
+                    </div>
+
+                    <div class="need-category">
+                        <h4>
+                            <span class="icon">🏠</span>
+                            Housing & Shelter
+                        </h4>
+                        <ul>
+                            <li>Emergency shelter services</li>
+                            <li>Transitional housing programs</li>
+                            <li>Rental assistance programs</li>
+                            <li>Housing vouchers (Section 8)</li>
+                            <li>Eviction prevention services</li>
+                            <li>Homeless prevention programs</li>
+                            <li>Utility assistance</li>
+                        </ul>
+                    </div>
+
+                    <div class="need-category">
+                        <h4>
+                            <span class="icon">👕</span>
+                            Clothing & Personal Items
+                        </h4>
+                        <ul>
+                            <li>Clothing closets and thrift stores</li>
+                            <li>Free clothing distribution events</li>
+                            <li>Baby clothing and supplies</li>
+                            <li>School uniforms and supplies</li>
+                            <li>Winter clothing programs</li>
+                            <li>Personal hygiene items</li>
+                            <li>Diaper and formula assistance</li>
+                        </ul>
+                    </div>
+
+                    <div class="need-category">
+                        <h4>
+                            <span class="icon">🚗</span>
+                            Transportation
+                        </h4>
+                        <ul>
+                            <li>Public transportation assistance</li>
+                            <li>Medical transportation services</li>
+                            <li>Gas voucher programs</li>
+                            <li>Car repair assistance</li>
+                            <li>Bike programs and repairs</li>
+                            <li>Ride-sharing programs</li>
+                            <li>Job interview transportation</li>
+                        </ul>
+                    </div>
+
+                    <div class="need-category">
+                        <h4>
+                            <span class="icon">💡</span>
+                            Utilities & Energy
+                        </h4>
+                        <ul>
+                            <li>Energy assistance programs (HEAP)</li>
+                            <li>Utility shutoff prevention</li>
+                            <li>Weatherization assistance</li>
+                            <li>Emergency heating/cooling help</li>
+                            <li>Low-income energy programs</li>
+                            <li>Internet and phone assistance</li>
+                        </ul>
+                    </div>
+
+                    <div class="need-category">
+                        <h4>
+                            <span class="icon">🩺</span>
+                            Healthcare & Medicine
+                        </h4>
+                        <ul>
+                            <li>Community health centers</li>
+                            <li>Free and reduced-cost clinics</li>
+                            <li>Prescription assistance programs</li>
+                            <li>Medicaid enrollment help</li>
+                            <li>Mental health services</li>
+                            <li>Dental and vision care</li>
+                            <li>Health insurance navigation</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2>How to Access Basic Needs Resources</h2>
+
+                <div class="tip-box">
+                    <h4>📞 Start with 2-1-1</h4>
+                    <p>Dial 2-1-1 from any phone to speak with a trained specialist who can connect you with local resources for food, housing, utilities, healthcare, and more. Available 24/7 in multiple languages.</p>
+                </div>
+
+                <h3>Steps to Get Help:</h3>
+                <ol style="margin-left: 20px; margin-bottom: 25px;">
+                    <li style="margin-bottom: 15px;"><strong>Identify your immediate needs</strong> - Make a list of what you need most urgently</li>
+                    <li style="margin-bottom: 15px;"><strong>Call 2-1-1 or use online directories</strong> - Get personalized referrals to local resources</li>
+                    <li style="margin-bottom: 15px;"><strong>Contact organizations directly</strong> - Call or visit the agencies that can help with your specific needs</li>
+                    <li style="margin-bottom: 15px;"><strong>Ask about eligibility requirements</strong> - Each program may have different criteria</li>
+                    <li style="margin-bottom: 15px;"><strong>Gather required documents</strong> - ID, proof of income, household size verification</li>
+                    <li style="margin-bottom: 15px;"><strong>Follow up</strong> - Stay in touch with case workers and check on application status</li>
+                </ol>
+
+                <div class="special-programs">
+                    <h3>🌟 Special Programs for Families</h3>
+                    
+                    <div class="program-highlight">
+                        <h4>Families with Young Children (Under 6)</h4>
+                        <p>Use the Bright Beginnings directory to find specialized resources including early learning programs, developmental screenings, parenting support, and age-appropriate services.</p>
+                    </div>
+                    
+                    <div class="program-highlight">
+                        <h4>Community Action Agencies</h4>
+                        <p>Your local Community Action Agency offers comprehensive services including energy assistance, housing programs, nutrition services, and family development programs all in one location.</p>
+                    </div>
+                    
+                    <div class="program-highlight">
+                        <h4>Faith-Based and Community Organizations</h4>
+                        <p>Many churches, mosques, synagogues, and community groups offer assistance programs. These often have fewer restrictions and can provide immediate help.</p>
+                    </div>
+                </div>
+
+                <h3>What to Bring When Seeking Help</h3>
+                <ul style="margin-left: 20px; margin-bottom: 25px;">
+                    <li>Photo identification for all household members</li>
+                    <li>Social Security cards</li>
+                    <li>Proof of income (pay stubs, benefit statements)</li>
+                    <li>Utility bills or rent receipts</li>
+                    <li>Bank statements</li>
+                    <li>Medical documentation (if relevant)</li>
+                    <li>Birth certificates for children</li>
+                </ul>
+
+                <div class="tip-box">
+                    <h4>💼 Don't Have All Documents?</h4>
+                    <p>Don't let missing paperwork stop you from seeking help. Many organizations can assist you while you gather documents, and some emergency programs have minimal requirements.</p>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2>Additional Support Resources</h2>
+                
+                <h3>For Ongoing Support:</h3>
+                <ul style="margin-left: 20px; margin-bottom: 25px;">
+                    <li><strong>Case Management:</strong> Many agencies offer case managers who can help coordinate multiple services</li>
+                    <li><strong>Benefits Screening:</strong> Get help determining all the programs you may qualify for</li>
+                    <li><strong>Financial Counseling:</strong> Learn budgeting and financial planning skills</li>
+                    <li><strong>Job Training and Placement:</strong> Address long-term economic stability</li>
+                    <li><strong>Education Support:</strong> GED programs, adult education, and skill development</li>
+                </ul>
+
+                <h3>Remember:</h3>
+                <ul style="margin-left: 20px;">
+                    <li>These resources exist to help - you're not alone</li>
+                    <li>It's okay to ask for help when you need it</li>
+                    <li>Many people need assistance at different times in their lives</li>
+                    <li>Don't wait until a crisis - seek help early when possible</li>
+                    <li>Be patient - some programs may have waiting lists or application processes</li>
+                </ul>
+            </section>
+        </div>
+    </main>
+</body>
+</html>

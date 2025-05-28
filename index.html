@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Know Your Rights and Resources</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #2c5aa0 0%, #1e3a5f 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        main {
+            padding: 60px 0;
+        }
+
+        .intro {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .intro p {
+            font-size: 1.1rem;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .resource-section {
+            background: white;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-left: 5px solid #2c5aa0;
+        }
+
+        .resource-section h2 {
+            color: #2c5aa0;
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .icon {
+            width: 32px;
+            height: 32px;
+            background: #2c5aa0;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .resource-list {
+            list-style: none;
+        }
+
+        .resource-list li {
+            margin-bottom: 15px;
+        }
+
+        .resource-list a {
+            display: block;
+            padding: 15px 20px;
+            background: #f8f9fa;
+            color: #333;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            border-left: 3px solid transparent;
+        }
+
+        .resource-list a:hover {
+            background: #e9ecef;
+            border-left-color: #2c5aa0;
+            transform: translateX(5px);
+        }
+
+        .sub-resource {
+            margin-left: 20px;
+            margin-top: 10px;
+            padding-left: 15px;
+            border-left: 2px solid #dee2e6;
+        }
+
+        .sub-resource a {
+            background: #ffffff;
+            font-size: 0.95rem;
+            color: #666;
+        }
+
+        .sub-resource a:hover {
+            color: #2c5aa0;
+            background: #f1f3f4;
+        }
+
+        .contact-section {
+            background: white;
+            border-radius: 12px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-section h2 {
+            color: #2c5aa0;
+            margin-bottom: 20px;
+        }
+
+        .contact-section p {
+            color: #666;
+            margin-bottom: 25px;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .contact-item {
+            text-align: center;
+        }
+
+        .contact-item strong {
+            display: block;
+            color: #2c5aa0;
+            margin-bottom: 5px;
+        }
+
+        footer {
+            background: #2c5aa0;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 60px;
+        }
+
+        @media (max-width: 768px) {
+            .resources-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .resource-section {
+                padding: 30px 20px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Know Your Rights and Resources</h1>
+            <h2>A Guide for Ohio Families</h2>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="intro">
+                <p>Access the information and resources you need to navigate important services, understand your rights, and support your family.</p>
+            </section>
+
+            <div class="resources-grid">
+                <section class="resource-section">
+                    <h2>
+                        <span class="icon">⚖️</span>
+                        Know Your Rights
+                    </h2>
+                    <ul class="resource-list">
+                        <li>
+                            <a href="/rights/public-benefits.html">Accessing Public Benefits</a>
+                        </li>
+                        <li>
+                            <a href="/rights/legal-aid.html">Accessing Legal Aid</a>
+                        </li>
+                        <li>
+                            <a href="/rights/police.html">Know Your Rights with Police</a>
+                        </li>
+                        <li>
+                            <a href="/rights/child-welfare.html">Know Your Rights with DCFS</a>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="resource-section">
+                    <h2>
+                        <span class="icon">🏠</span>
+                        Know Your Resources
+                    </h2>
+                    <ul class="resource-list">
+                        <li>
+                            <a href="/resources/basic-needs.html">Basic Needs</a>
+                        </li>
+                        <li>
+                            <a href="/resources/child-care.html">Child Care and Early Learning</a>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+
+            <section class="contact-section">
+                <h2>Need Help Finding Resources?</h2>
+                <p>If you can't find what you're looking for or need assistance navigating these resources, we're here to help.</p>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <strong>Email</strong>
+                        <span>delaney.jones@enesco.org</span>
+                    </div>
+                    <div class="contact-item">
+                        <strong>Phone</strong>
+                        <span>(216) 770-4487</span>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Know Your Rights and Resources Ohio.</p>
+        </div>
+    </footer>
+</body>
+</html>

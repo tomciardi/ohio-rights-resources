@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessing Public Benefits | Community Resources Hub</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #2c5aa0 0%, #1e3a5f 100%);
+            color: white;
+            padding: 40px 0;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .back-link {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            font-size: 0.9rem;
+            padding: 8px 16px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+
+        .back-link:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+        }
+
+        main {
+            padding: 50px 0;
+        }
+
+        .quick-apply {
+            background: #d4edda;
+            border-left: 5px solid #28a745;
+            padding: 25px;
+            margin-bottom: 40px;
+            border-radius: 8px;
+        }
+
+        .quick-apply h2 {
+            color: #155724;
+            margin-bottom: 20px;
+            font-size: 1.4rem;
+        }
+
+        .apply-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        .apply-link {
+            display: block;
+            background: white;
+            padding: 15px 20px;
+            text-decoration: none;
+            color: #333;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            border-left: 3px solid #28a745;
+        }
+
+        .apply-link:hover {
+            transform: translateX(5px);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .apply-link strong {
+            display: block;
+            color: #28a745;
+            margin-bottom: 5px;
+        }
+
+        .content-section {
+            background: white;
+            padding: 40px;
+            margin-bottom: 30px;
+            border-radius: 12px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .content-section h2 {
+            color: #2c5aa0;
+            font-size: 1.6rem;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e9ecef;
+        }
+
+        .content-section h3 {
+            color: #1e3a5f;
+            font-size: 1.3rem;
+            margin: 30px 0 20px 0;
+        }
+
+        .poverty-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .poverty-table th {
+            background: #2c5aa0;
+            color: white;
+            padding: 15px 12px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .poverty-table td {
+            padding: 12px;
+            text-align: center;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .poverty-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+
+        .poverty-table tr:hover {
+            background: #e3f2fd;
+        }
+
+        .household-size {
+            background: #1e3a5f !important;
+            color: white !important;
+            font-weight: 600;
+        }
+
+        .additional-note {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 6px;
+            padding: 15px;
+            margin-top: 20px;
+            font-size: 0.9rem;
+        }
+
+        .programs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+
+        .program-card {
+            background: #f8f9fa;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            padding: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .program-card:hover {
+            border-color: #2c5aa0;
+            transform: translateY(-2px);
+        }
+
+        .program-card h4 {
+            color: #2c5aa0;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .program-card .alt-name {
+            color: #666;
+            font-style: italic;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+
+        .program-card p {
+            line-height: 1.6;
+        }
+
+        .tip-box {
+            background: #e8f4f8;
+            border-left: 5px solid #17a2b8;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 8px;
+        }
+
+        .tip-box h4 {
+            color: #0c5460;
+            margin-bottom: 10px;
+        }
+
+        .tip-box p {
+            color: #0c5460;
+        }
+
+        .contact-info {
+            background: #fff0f0;
+            border: 2px solid #f8d7da;
+            border-radius: 8px;
+            padding: 25px;
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .contact-info h3 {
+            color: #721c24;
+            margin-bottom: 15px;
+            margin-top: 0;
+        }
+
+        .contact-info p {
+            color: #721c24;
+            font-size: 1.1rem;
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .content-section {
+                padding: 30px 20px;
+            }
+
+            .poverty-table {
+                font-size: 0.8rem;
+            }
+
+            .poverty-table th,
+            .poverty-table td {
+                padding: 8px 6px;
+            }
+
+            .programs-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .program-card {
+                padding: 20px 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .poverty-table {
+                font-size: 0.7rem;
+            }
+
+            .poverty-table th,
+            .poverty-table td {
+                padding: 6px 4px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="../index.html" class="back-link">← Back to Resources</a>
+                <h1>Accessing Public Benefits</h1>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="quick-apply">
+                <h2>🚀 Apply for Benefits</h2>
+                <div class="apply-links">
+                    <a href="https://ssp.benefits.ohio.gov/apspssp/ssp.portal" class="apply-link">
+                        <strong>Check Eligibility Online</strong>
+                        See what programs you may qualify for
+                    </a>
+                    <a href="#" class="apply-link">
+                        <strong>Video Instructions</strong>
+                        Step-by-step application guide
+                    </a>
+                    <a href="https://childcare.gov/state-resources/ohio/financial-assistance-resources-for-families" class="apply-link" target="_blank" rel="noopener">
+                        <strong>Child Care Financial Assistance</strong>
+                        Ohio child care support resources
+                    </a>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2>Understanding Federal Poverty Levels</h2>
+                <p>The Federal Poverty Level is an income amount used to determine eligibility for various income-based public programs, such as Medicaid and food stamps. The dollar amount varies depending on how many people are in your household.</p>
+                
+                <p><strong>If your yearly income is below the dollar amount listed for the number of people in your home, you are considered in-need and eligible for various income-based public programs.</strong></p>
+
+                <h3>2025 Federal Poverty Level Guidelines</h3>
+                <table class="poverty-table">
+                    <thead>
+                        <tr>
+                            <th>Household Size</th>
+                            <th>1</th>
+                            <th>2</th>
+                            <th>3</th>
+                            <th>4</th>
+                            <th>5</th>
+                            <th>6</th>
+                            <th>7</th>
+                            <th>8</th>
+                            <th>9+</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="household-size">48 contiguous states + DC</td>
+                            <td>$15,650</td>
+                            <td>$21,150</td>
+                            <td>$26,650</td>
+                            <td>$32,150</td>
+                            <td>$37,650</td>
+                            <td>$43,150</td>
+                            <td>$48,650</td>
+                            <td>$54,150</td>
+                            <td>Add $5,500 per additional person</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="additional-note">
+                    <p><strong>Note:</strong> Federal Poverty Level guidelines are issued yearly by the U.S. Department of Health and Human Services. Different amounts apply for Alaska and Hawaii due to higher costs of living.</p>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2>Ohio Assistance Programs and Services</h2>
+                <p>ODJFS and ODM have several programs that help low-income individuals. Each program has its own eligibility rules. Talk with your county JFS office about which benefits may be right for you.</p>
+
+                <div class="tip-box">
+                    <h4>💡 Get Personalized Help</h4>
+                    <p>Contact your local county Job and Family Services (JFS) office to discuss which programs you may be eligible for and get help with applications.</p>
+                </div>
+
+                <h3>Available Programs</h3>
+                <div class="programs-grid">
+                    <div class="program-card">
+                        <h4>Ohio Works First (OWF)</h4>
+                        <div class="alt-name">also known as Cash Assistance</div>
+                        <p>Cash benefits for families in need for up to 36 months. You may be eligible for up to 60 months if you meet certain criteria.</p>
+                    </div>
+
+                    <div class="program-card">
+                        <h4>Supplemental Nutrition Assistance Program (SNAP)</h4>
+                        <div class="alt-name">also known as Food Assistance</div>
+                        <p>Benefits to help purchase food.</p>
+                    </div>
+
+                    <div class="program-card">
+                        <h4>Child Care Assistance</h4>
+                        <div class="alt-name">also known as Publicly Funded Child Care (PFCC)</div>
+                        <p>Financial assistance for child care costs to eligible caretakers while they work, go to school, or are participating in job training.</p>
+                    </div>
+
+                    <div class="program-card">
+                        <h4>Medicaid</h4>
+                        <div class="alt-name">also known as Medical Assistance</div>
+                        <p>Assistance to help pay for health care for low-income and medically vulnerable Ohioans.</p>
+                    </div>
+
+                    <div class="program-card">
+                        <h4>Child Support</h4>
+                        <p>Financial and medical support for children.</p>
+                    </div>
+
+                    <div class="program-card">
+                        <h4>Unemployment Benefits</h4>
+                        <p>Temporary financial assistance to workers unemployed through no fault of their own. To file for unemployment by phone, call 877-644-6562.</p>
+                    </div>
+
+                    <div class="program-card">
+                        <h4>Refugee Services</h4>
+                        <div class="alt-name">also known as Refugee Cash Assistance (RCA)</div>
+                        <p>Helps refugees find work to support their families and to connect them with local schools and the community.</p>
+                    </div>
+
+                    <div class="program-card">
+                        <h4>Prevention, Retention and Contingency (PRC)</h4>
+                        <p>Work support and other services to help low-income families overcome immediate barriers to achieve self-sufficiency.</p>
+                    </div>
+
+                    <div class="program-card">
+                        <h4>Employment Services</h4>
+                        <p>Job training and/or help finding a job.</p>
+                    </div>
+
+                    <div class="program-card">
+                        <h4>Foster Care and Adoption Assistance</h4>
+                        <p>Provides subsidies and reimbursements to foster care and adoptive families.</p>
+                    </div>
+
+                    <div class="program-card">
+                        <h4>Learning, Earning and Parenting Services (LEAP)</h4>
+                        <p>Designed to encourage pregnant and parenting teens to attend and complete high school or the equivalent.</p>
+                    </div>
+
+                    <div class="program-card">
+                        <h4>Kinship Programs</h4>
+                        <p>Provide benefits and services to caregivers so that children may be cared for in the home of relatives or other caregivers when their parents are unable to care for them.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2>How to Apply for Benefits</h2>
+                <p>Here are the steps involved in applying for public benefits:</p>
+
+                <ol style="margin-left: 20px; margin-bottom: 25px;">
+                    <li style="margin-bottom: 15px;"><strong>Check eligibility online</strong> - Use online screening tools to see what programs you may qualify for</li>
+                    <li style="margin-bottom: 15px;"><strong>Watch instructional video</strong> - Get step-by-step guidance on the application process</li>
+                    <li style="margin-bottom: 15px;"><strong>Contact your local JFS office</strong> - Speak with a caseworker about your specific situation</li>
+                    <li style="margin-bottom: 15px;"><strong>Gather required documents</strong> - Income verification, identification, household information</li>
+                    <li style="margin-bottom: 15px;"><strong>Submit your application</strong> - Online, by phone, or in person</li>
+                    <li style="margin-bottom: 15px;"><strong>Attend any required interviews</strong> - Complete the eligibility process</li>
+                </ol>
+
+                <div class="tip-box">
+                    <h4>📋 What to Bring</h4>
+                    <p>Typical documents needed: Social Security cards, birth certificates, pay stubs, bank statements, rent receipts, utility bills, and medical expenses documentation.</p>
+                </div>
+            </section>
+
+            <div class="contact-info">
+                <h3>📞 Need Help Applying?</h3>
+                <p><strong>Contact your local county Job and Family Services (JFS) office</strong></p>
+                <p>They can help determine which programs you're eligible for and assist with applications.</p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
