@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accessing Legal Aid | Community Resources Hub</title>
+    <title>Legal Aid</title>
     <style>
         * {
             margin: 0;
@@ -127,11 +127,9 @@
             margin-bottom: 35px;
         }
 
-        .law-category h4 {
+        .law-category a {
             color: #2c5aa0;
-            font-size: 1.1rem;
-            margin-bottom: 15px;
-            font-weight: 600;
+            font-weight: bold;
         }
 
         ul {
@@ -160,20 +158,6 @@
             margin-bottom: 10px;
         }
 
-        .emergency-contact {
-            background: #f8d7da;
-            border: 1px solid #f5c6cb;
-            border-radius: 8px;
-            padding: 20px;
-            margin: 25px 0;
-            text-align: center;
-        }
-
-        .emergency-contact h4 {
-            color: #721c24;
-            margin-bottom: 10px;
-        }
-
         .contact-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -187,6 +171,9 @@
             border-radius: 8px;
             text-align: center;
             border: 2px solid #e9ecef;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
 
         .contact-card h4 {
@@ -196,11 +183,15 @@
 
         .contact-card a {
             color: #2c5aa0;
-            text-decoration: none;
+            font-weight: bold;
         }
 
         .contact-card a:hover {
             text-decoration: underline;
+        }
+
+        .contact-card p {
+            margin: auto 0;
         }
 
         @media (max-width: 768px) {
@@ -239,6 +230,10 @@
             <section class="quick-resources">
                 <h2>🚀 Quick Access to Legal Help</h2>
                 <div class="resource-links">
+                    <a href="https://www.ohiolegalhelp.org/" class="resource-link" target="_blank" rel="noopener">
+                        <strong>Ohio Legal Help</strong>
+                        Free legal information and resources online
+                    </a>
                     <a href="https://www.ohiolegalhelp.org/find-your-legal-aid" class="resource-link" target="_blank" rel="noopener">
                         <strong>Find Your Local Legal Aid Office</strong>
                         Ohio Legal Help directory of all legal aid organizations
@@ -247,17 +242,8 @@
                         <strong>Ohio Justice Foundation Directory</strong>
                         Complete list of Ohio's legal aid organizations
                     </a>
-                    <a href="https://www.ohiolegalhelp.org/" class="resource-link" target="_blank" rel="noopener">
-                        <strong>Ohio Legal Help</strong>
-                        Free legal information and resources online
-                    </a>
                 </div>
             </section>
-
-            <div class="emergency-contact">
-                <h4>⚠️ Need Immediate Legal Help?</h4>
-                <p>If you're facing an emergency legal situation (domestic violence, eviction notice, etc.), contact your local legal aid office immediately or call 211 for emergency assistance.</p>
-            </div>
 
             <section class="content-section">
                 <h2>Understanding Your Legal Rights in Ohio</h2>
@@ -265,93 +251,65 @@
 
                 <div class="law-category">
                     <h3>1. Family Law</h3>
-                    <h4>Parental Rights:</h4>
-                    <ul>
-                        <li><strong>Married Parents:</strong> Both mothers and fathers have equal rights to legal and residential custody of their children when married at the time of birth</li>
-                        <li><strong>Unmarried Parents:</strong> The mother typically has sole custody until a court order designates otherwise</li>
-                    </ul>
-                    
-                    <h4>Child Support:</h4>
-                    <ul>
-                        <li>Ohio uses an <strong>Income Shares Model</strong> that considers both parents' incomes</li>
-                        <li>Designed to ensure children receive the same financial support as if parents lived together</li>
-                    </ul>
+                    <u1>
+                        <li><a href="https://familylawohio.com/child-custody-rights-mothers-rights-and-fathers-rights-in-ohio/">Parental Rights:</a> Both mothers and fathers have equal rights to legal and residential custody of their children when married at the time of birth.</li>
+                        <li><a href="https://www.ohiolegalhelp.org/detail/custody-visitation-shared-parenting">Child Custody:</a> If parents are unmarried, the mother typically has sole custody until a court order designates otherwise.</li>
+                        <li><a href="https://www.ohiobar.org/public-resources/commonly-asked-law-questions-results/law-facts/law-facts-child-support/">Child Support:</a> Ohio uses an <a href="https://ohiochildsupportcalculator.ohio.gov/pages/calculator.html">Income Shares Model</a> that considers both parents' incomes to ensure the child receives the same level of financial support they would have if their parents lived together.</li>
+                    </u1>
                 </div>
 
                 <div class="law-category">
                     <h3>2. Housing Rights</h3>
-                    <h4>Landlord Obligations:</h4>
                     <ul>
-                        <li>Provide a <strong>habitable and safe living environment</strong></li>
-                        <li>Comply with housing codes</li>
-                        <li>Provide necessary services (water, heat, trash removal)</li>
-                        <li>Give at least <strong>24-hour notice</strong> before entering (except emergencies)</li>
+                        <li><a href="https://www.ohiobar.org/public-resources/commonly-asked-law-questions-results/law-facts/law-facts-tenant--landlord-rights-and-obligations/">Landlord and Tenant:</a> Ohio law defines the rights and obligations of both landlords and tenants. Landlords must provide a habitable and safe living environment, comply with housing codes, and provide necessary services like water, heat, and trash removal.</li>
+                        <li><a href="https://ohiohome.org/renters.aspx">Tenant Rights:</a> Tenants have the right to a safe and habitable dwelling, to complain about violations, and to join with other tenants.</li>
+                        <li><a href="https://lascinti.org/wp-content/uploads/Tenants-Guide-to-Eviction-Court.pdf">Eviction:</a> Landlords must follow specific procedures when evicting a tenant. They must provide at least 24-hour notice before entering the property, except in emergencies.</li>
                     </ul>
-                    
-                    <h4>Tenant Rights:</h4>
-                    <ul>
-                        <li>Right to a safe and habitable dwelling</li>
-                        <li>Right to complain about violations without retaliation</li>
-                        <li>Right to join with other tenants</li>
-                        <li>Protection from improper eviction procedures</li>
-                    </ul>
-                </div>
-
-                <div class="highlight-box">
-                    <h4>🏠 Facing Eviction?</h4>
-                    <p>Landlords must follow specific legal procedures for eviction. Contact legal aid immediately if you receive an eviction notice to understand your rights and options.</p>
                 </div>
 
                 <div class="law-category">
                     <h3>3. Consumer Protection</h3>
-                    <h4>Consumer Sales Practices Act:</h4>
                     <ul>
-                        <li>Protects against <strong>unfair, deceptive, or unconscionable practices</strong></li>
-                        <li>Ensures businesses engage in fair and honest practices</li>
-                        <li>Provides remedies for consumer fraud</li>
-                    </ul>
-                    
-                    <h4>Vehicle Purchase Protection:</h4>
-                    <ul>
-                        <li>Right to cancel vehicle purchase if title isn't delivered within required timeframe</li>
-                        <li>Protection under the Certificate of Motor Vehicle Title Act</li>
-                    </ul>
+                        <li><strong>Consumer Fraud Protection:</strong> The <a href="https://www.ohioattorneygeneral.gov/consumerlaws#Consumer_Sales_Practice_Act">Consumer Sales Practices Act</a> protects consumers from unfair, deceptive, or unconscionable practices. It is designed to protect consumers by ensuring that businesses engage in fair and honest practices when selling goods and services to consumers in Ohio.</li>
+                        <li><strong>Vehicle Purchase Protection:</strong> The <a href="https://www.ohioattorneygeneral.gov/consumerlaws#Certificate_of_Motor_Vehicle_Title_Act">Certificate of Motor Vehicle Title Act</a> gives consumers the right to cancel a vehicle purchase if the title is not delivered within a certain timeframe.</li>
                 </div>
 
                 <div class="law-category">
-                    <h3>4. Labor & Employment Law</h3>
-                    <h4>Minimum Wage (as of January 1, 2025):</h4>
+                    <h3>4. Labor and Employment Law</h3>
                     <ul>
-                        <li><strong>Non-tipped employees:</strong> $10.70 per hour</li>
-                        <li><strong>Tipped employees:</strong> $5.35 per hour</li>
-                    </ul>
-                    
-                    <h4>Workplace Rights:</h4>
-                    <ul>
-                        <li>Protection from discrimination based on protected characteristics</li>
-                        <li>Right to file wage complaints with Ohio Department of Commerce</li>
-                        <li>Access to Ohio Civil Rights Commission for discrimination issues</li>
+                        <li><a href="https://dam.assets.ohio.gov/image/upload/com.ohio.gov/DICO/WageAndHour/DICO_2025_MW_Poster.pdf">Minimum Wage:</a> Ohio has a minimum wage law. The minimum wage is $10.70 per hour for non-tipped employees, and $5.35 for tipped employees as of January 1, 2025.</li>
+                        <li><a href="https://com.ohio.gov/divisions-and-programs/industrial-compliance/wage-and-hour">Labor Law Complaints:</a> The Ohio Department of Commerce's Bureau of Wage and Hour Administration investigates complaints related to wages and other labor issues.</li>
+                        <li><a href="https://civ.ohio.gov/">Discrimination:</a> Ohio law prohibits discrimination in employment based on various protected characteristics. The Ohio Civil Rights Commission enforces Ohio's laws against discrimination.</li>             
                     </ul>
                 </div>
             </section>
 
             <section class="content-section">
                 <h2>How to Access Legal Aid in Ohio</h2>
-                <p>Legal aid organizations provide free legal help to qualifying individuals and families. Here's how to access these services:</p>
+                <p>Legal aid organizations provide free legal help to qualifying individuals and families. Here are several places you can find legal aid services:</p>
 
                 <h3>Finding Legal Aid</h3>
-                <ul>
-                    <li><strong>Start with your local Legal Aid Society</strong> - they can assess your eligibility and connect you with appropriate services</li>
-                    <li><strong>Use online directories</strong> to find the legal aid office serving your area</li>
-                    <li><strong>Contact Advocates for Basic Legal Equality (ABLE)</strong> for additional services</li>
-                </ul>
+                <div class="contact-grid">
+                    <div class="contact-card">
+                        <a href="https://www.ohiolegalhelp.org/find-your-legal-aid">Ohio Legal Help</a>
+                        
+                    </div>
+                    <div class="contact-card">
+                        <a href="https://www.ohiojusticefoundation.org/ohios-legal-aids-2/">Ohio Access to Justice Foundation</a>
 
-                <div class="highlight-box">
-                    <h4>🚌 Ohio Justice Bus</h4>
-                    <p>Look for the mobile legal aid office in your community! The Ohio Justice Bus brings free legal services and technology access directly to neighborhoods.</p>
+                    </div>
+                    <div class="contact-card">
+                        <a href="https://www.ablelaw.org/">Advocates for Basic Legal Equality (ABLE)</a>
+
+                    </div>
                 </div>
 
-                <h3>What Legal Aid Can Help With</h3>
+                <div class="highlight-box">
+                    <h4>🚌 Ohio Justice Bus</h4> 
+                    <p><a href="https://www.ohiojusticefoundation.org/grantees/ohio-justice-bus/">The Ohio Justice Bus</a> is a mobile legal aid office and technology hotspot that allows legal aid and pro bono attorneys to travel to and provide legal services to Ohioans at no cost to clients.</p>
+                </div>
+
+                <h3>What Legal Aid Can Help With?</h3>
                 <ul>
                     <li>Housing issues (evictions, landlord problems, housing discrimination)</li>
                     <li>Family law matters (custody, divorce, domestic violence)</li>
@@ -360,21 +318,7 @@
                     <li>Employment problems and wage theft</li>
                     <li>Healthcare access and insurance issues</li>
                 </ul>
-
-                <div class="contact-grid">
-                    <div class="contact-card">
-                        <h4>📞 Need Help Now?</h4>
-                        <p>Call <strong>2-1-1</strong> for immediate assistance connecting to legal and community resources</p>
-                    </div>
-                    <div class="contact-card">
-                        <h4>💻 Online Resources</h4>
-                        <p><a href="https://www.ohiolegalhelp.org/" target="_blank" rel="noopener">Ohio Legal Help</a><br>Free legal information and forms</p>
-                    </div>
-                    <div class="contact-card">
-                        <h4>🏢 Local Office</h4>
-                        <p>Use the directory links above to find your nearest legal aid office</p>
-                    </div>
-                </div>
+                <p>More information on legal aid and resources can be found on <a href="https://www.ohiolegalhelp.org/">Ohio Legal Help's website</a>.</p>
             </section>
         </div>
     </main>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accessing Public Benefits | Community Resources Hub</title>
+    <title>Public Benefits</title>
     <style>
         * {
             margin: 0;
@@ -61,15 +61,15 @@
         }
 
         .quick-apply {
-            background: #d4edda;
-            border-left: 5px solid #28a745;
+            background: #e8f4f8;
+            border-left: 5px solid #2c5aa0;
             padding: 25px;
             margin-bottom: 40px;
             border-radius: 8px;
         }
 
         .quick-apply h2 {
-            color: #155724;
+            color: #2c5aa0;
             margin-bottom: 20px;
             font-size: 1.4rem;
         }
@@ -88,7 +88,7 @@
             color: #333;
             border-radius: 6px;
             transition: all 0.3s ease;
-            border-left: 3px solid #28a745;
+            border-left: 3px solid #2c5aa0;
         }
 
         .apply-link:hover {
@@ -98,7 +98,7 @@
 
         .apply-link strong {
             display: block;
-            color: #28a745;
+            color: #2c5aa0;
             margin-bottom: 5px;
         }
 
@@ -126,7 +126,8 @@
 
         .poverty-table {
             width: 100%;
-            border-collapse: collapse;
+            border-collapse: separate;
+            border-spacing: 0.5px 1px; /* 1px horizontal spacing, 0 vertical */
             margin: 25px 0;
             background: white;
             border-radius: 8px;
@@ -141,12 +142,22 @@
             text-align: center;
             font-weight: 600;
             font-size: 0.9rem;
+            border-right: 1px solid white;
+        }
+
+        .poverty-table th:last-child {
+            border-right: none; /* Remove border from last column */
         }
 
         .poverty-table td {
             padding: 12px;
             text-align: center;
             border-bottom: 1px solid #e9ecef;
+            border-right: 1px solid white;
+        }
+
+        .poverty-table td:last-child {
+            border-right: none; /* Remove border from last column */
         }
 
         .poverty-table tr:nth-child(even) {
@@ -222,6 +233,11 @@
             margin-bottom: 10px;
         }
 
+        .tip-box a {
+            color: #0c5460;
+            font-weight: bold;
+        }
+
         .tip-box p {
             color: #0c5460;
         }
@@ -239,6 +255,11 @@
             color: #721c24;
             margin-bottom: 15px;
             margin-top: 0;
+        }
+
+        .contact-info a {
+            color: #721c24;
+            font-weight: bold;
         }
 
         .contact-info p {
@@ -279,6 +300,27 @@
             }
         }
 
+        .method-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #2c5aa0;
+        }
+
+        .method-card h4 {
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        .method-card a {
+            color: #2c5aa0;
+            font-weight: bold;
+        }
+
+        .method-card p {
+            margin-bottom: 0;
+        }
+
         @media (max-width: 480px) {
             .poverty-table {
                 font-size: 0.7rem;
@@ -296,7 +338,7 @@
         <div class="container">
             <div class="header-content">
                 <a href="../index.html" class="back-link">← Back to Resources</a>
-                <h1>Accessing Public Benefits</h1>
+                <h1>Public Benefits</h1>
             </div>
         </div>
     </header>
@@ -308,26 +350,24 @@
                 <div class="apply-links">
                     <a href="https://ssp.benefits.ohio.gov/apspssp/ssp.portal" class="apply-link">
                         <strong>Check Eligibility Online</strong>
-                        See what programs you may qualify for
+                        See what programs you may qualify for in Ohio
                     </a>
-                    <a href="#" class="apply-link">
+                    <a href="https://www.youtube.com/watch?v=yiGV2E_ZuDA" class="apply-link">
                         <strong>Video Instructions</strong>
                         Step-by-step application guide
                     </a>
-                    <a href="https://childcare.gov/state-resources/ohio/financial-assistance-resources-for-families" class="apply-link" target="_blank" rel="noopener">
-                        <strong>Child Care Financial Assistance</strong>
-                        Ohio child care support resources
+                    <a href="https://childcare.gov/state-resources/ohio/financial-assistance-resources-for-families" class="apply-link">
+                        <strong>Financial Assistance Resources</strong>
+                        Financial assistance programs offered for Ohio families
                     </a>
                 </div>
             </section>
 
             <section class="content-section">
                 <h2>Understanding Federal Poverty Levels</h2>
-                <p>The Federal Poverty Level is an income amount used to determine eligibility for various income-based public programs, such as Medicaid and food stamps. The dollar amount varies depending on how many people are in your household.</p>
-                
-                <p><strong>If your yearly income is below the dollar amount listed for the number of people in your home, you are considered in-need and eligible for various income-based public programs.</strong></p>
+                <p>The Federal Poverty Level is an income amount used to determine eligibility for various income-based public programs, such as Medicaid and food stamps. The dollar amount varies depending on how many people are in your household. <strong>If your yearly income is below the dollar amount listed for the number of people in your home, you are considered in-need and eligible for various income-based public programs.</strong></p>
 
-                <h3>2025 Federal Poverty Level Guidelines</h3>
+                <h3>2025 Federal Poverty Level</h3>
                 <table class="poverty-table">
                     <thead>
                         <tr>
@@ -360,18 +400,13 @@
                 </table>
 
                 <div class="additional-note">
-                    <p><strong>Note:</strong> Federal Poverty Level guidelines are issued yearly by the U.S. Department of Health and Human Services. Different amounts apply for Alaska and Hawaii due to higher costs of living.</p>
+                    <p><strong>Note:</strong> Federal Poverty Level guidelines are issued yearly by the U.S. Department of Health and Human Services.</p>
                 </div>
             </section>
 
             <section class="content-section">
                 <h2>Ohio Assistance Programs and Services</h2>
-                <p>ODJFS and ODM have several programs that help low-income individuals. Each program has its own eligibility rules. Talk with your county JFS office about which benefits may be right for you.</p>
-
-                <div class="tip-box">
-                    <h4>💡 Get Personalized Help</h4>
-                    <p>Contact your local county Job and Family Services (JFS) office to discuss which programs you may be eligible for and get help with applications.</p>
-                </div>
+                <p>There are many different types of public assistance programs for those deemed in-poverty or in-need. For example, ODJFS and ODM have several programs that help low-income individuals. Each program has its own eligibility rules. Below is a list of assistance programs and supportive services:</p>
 
                 <h3>Available Programs</h3>
                 <div class="programs-grid">
@@ -440,30 +475,75 @@
                         <p>Provide benefits and services to caregivers so that children may be cared for in the home of relatives or other caregivers when their parents are unable to care for them.</p>
                     </div>
                 </div>
+
+                <div class="tip-box">
+                    <h3 style="display: inline;">💡 </h3><a href="https://jfs.ohio.gov/about/local-agencies-directory">Tip: JFS Can Give Personalized Help</a>
+                    <p>Contact your local county Job and Family Services (JFS) office to discuss which programs you may be eligible for and get help with applications.</p>
+                </div>
             </section>
 
             <section class="content-section">
                 <h2>How to Apply for Benefits</h2>
-                <p>Here are the steps involved in applying for public benefits:</p>
+                <p>There are multiple ways to apply for SNAP, Cash, Medicaid, and Child Care Assistance programs in Ohio:</p>
 
-                <ol style="margin-left: 20px; margin-bottom: 25px;">
-                    <li style="margin-bottom: 15px;"><strong>Check eligibility online</strong> - Use online screening tools to see what programs you may qualify for</li>
-                    <li style="margin-bottom: 15px;"><strong>Watch instructional video</strong> - Get step-by-step guidance on the application process</li>
-                    <li style="margin-bottom: 15px;"><strong>Contact your local JFS office</strong> - Speak with a caseworker about your specific situation</li>
-                    <li style="margin-bottom: 15px;"><strong>Gather required documents</strong> - Income verification, identification, household information</li>
-                    <li style="margin-bottom: 15px;"><strong>Submit your application</strong> - Online, by phone, or in person</li>
-                    <li style="margin-bottom: 15px;"><strong>Attend any required interviews</strong> - Complete the eligibility process</li>
-                </ol>
+                <div class="application-methods" style="margin-bottom: 30px;">
+                    <h3>Application Methods</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-bottom: 25px;">
+                        <div class="method-card">
+                            <h4>💻 Online</h4>
+                            <p>Create or access your account at <a href="ssp.benefits.ohio.gov">ssp.benefits.ohio.gov</a>. You can fill out applications for all programs using your account.</p>
+                        </div>
+                        <div class="method-card">
+                            <h4>📧 Mail or Fax</h4>
+                            <p>Mail or fax completed applications to your county JFS office. Find contact info at <a href="jfs.ohio.gov/about/local-agencies-directory">jfs.ohio.gov/about/local-agencies-directory</a>.</p>
+                        </div>
+                        <div class="method-card">
+                            <h4>📞 Phone</h4>
+                            <p>Call <strong>844-640-6446</strong> to apply by phone or request an application. For Medicaid only, call <strong>800-324-8680</strong>.</p>
+                        </div>
+                        <div class="method-card" style="background: #f8f9fa; padding: 20px; border-radius: 8px; border-left: 4px solid #2c5aa0; grid-column: 1 / -1;">
+                            <h4>🏢 In-Person</h4>
+                            <p>Complete, sign, and turn in applications at your county JFS office. They will give you a receipt.</p>
+                            <ul style="margin-left: 20px; padding-left: 0;">
+                                <li><a href="https://www.odjfs.state.oh.us/forms/num/JFS07200/pdf">Application</a> for SNAP, Cash Assistance, Medical Assistance, and Child Care Assistance.</li>
+                                <li><a href="https://medicaid.ohio.gov/static/Resources/Publications/Forms/ODM07216fillx.pdf">Application</a> for Medicaid.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="application-process" style="margin-bottom: 30px;">
+                    <h3>📝 Application Process Steps</h3>
+                    <ol style="margin-left: 20px; margin-bottom: 25px;">
+                        <li style="margin-bottom: 15px;"><strong>Fill as much of the application as you can</strong> - Include at least your name, address, and signature. You can leave questions blank if you are not sure how to answer a question.</li>
+                        <li style="margin-bottom: 15px;"><strong>Sign and date the application</strong> - Required before turning it in to your county JFS office.</li>
+                        <li style="margin-bottom: 15px;"><strong>Submit within required timeframes</strong> - You have 30 days from the date you turned in your application to provide any additional information.</li>
+                        <li style="margin-bottom: 15px;"><strong>Complete interview (if required)</strong> - Some applications require an interview such as SNAP or Cash Assistance.</li>
+                        <li style="margin-bottom: 15px;"><strong>Provide verification documents</strong> - Your county JFS office will tell you any verification documents you need to submit and will send a Verification Request Checklist (JFS 07105) - this list contains deadlines for verficiation submissions. JFS will send you an eligibility notice after your application is processed.</li>
+                        <li style="margin-bottom: 15px;"><strong>Receive decision</strong> - You'll get an approval notice with benefit information or a denial notice explaining the decision.</li>
+                    </ol>
+                </div>
+
+                <div class="tip-box" style="background: #fff3cd; padding: 20px; border-radius: 8px; border-left: 4px solid #ffc107; margin-bottom: 25px;">
+                    <h4>⚠️ Important Notes</h4>
+                    <ul style="margin: 0; padding-left: 20px;">
+                        <li>You can use an Authorized Representative to assist completing applications. They must be at least 18 years old and aware of your household circumstances. The representative can be changed at any time.</li>
+                        <li>For <strong>SNAP, Cash, and Child Care Assistance applications</strong>, your JFS office <strong>determines eligibility within 30 days</strong> of the date your application is turned in.</li>
+                        <li>For <strong>Medicaid applications</strong>, your JFS office will <strong>eligibility within 45 days.</strong></li>
+                        <li>You may get help applying for Medicaid thorugh local providers or hospitals.</li>
+                        <li>Review any notices you receive carefully - they contain helpful resources and contact information.</li>
+                    </ul>
+                </div>
 
                 <div class="tip-box">
-                    <h4>📋 What to Bring</h4>
-                    <p>Typical documents needed: Social Security cards, birth certificates, pay stubs, bank statements, rent receipts, utility bills, and medical expenses documentation.</p>
+                    <h4>📋 Required Documents</h4>
+                    <p>Typical documents needed: Social Security cards, birth certificates, pay stubs, bank statements, rent receipts, utility bills, medical expenses documentation, and proof of citizenship or immigration status.</p>
                 </div>
             </section>
 
             <div class="contact-info">
                 <h3>📞 Need Help Applying?</h3>
-                <p><strong>Contact your local county Job and Family Services (JFS) office</strong></p>
+                <p><a href="https://jfs.ohio.gov/about/local-agencies-directory">Contact your local county Job and Family Services (JFS) office</a></p>
                 <p>They can help determine which programs you're eligible for and assist with applications.</p>
             </div>
         </div>
