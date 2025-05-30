@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Know Your Rights with Police | Community Resources Hub</title>
+    <title>Your Rights When Stopped by Police</title>
     <style>
         * {
             margin: 0;
@@ -60,53 +60,57 @@
             padding: 50px 0;
         }
 
-        .important-reminder {
-            background: #d1ecf1;
-            border: 2px solid #bee5eb;
-            border-radius: 8px;
+        .emergency-info {
+            background: #dc3545;
+            color: white;
             padding: 25px;
             margin-bottom: 40px;
+            border-radius: 8px;
             text-align: center;
         }
 
-        .important-reminder h2 {
-            color: #0c5460;
+        .emergency-info h2 {
             margin-bottom: 15px;
             font-size: 1.4rem;
         }
 
-        .important-reminder p {
-            color: #0c5460;
+        .emergency-info p {
             font-size: 1.1rem;
             font-weight: 500;
         }
 
-        .quick-reference {
-            background: #fff3cd;
-            border-left: 5px solid #ffc107;
+        .quick-resources {
+            background: #e8f4f8;
+            border-left: 5px solid #2c5aa0;
             padding: 25px;
             margin-bottom: 40px;
             border-radius: 8px;
         }
 
-        .quick-reference h2 {
-            color: #856404;
+        .quick-resources h2 {
+            color: #2c5aa0;
             margin-bottom: 20px;
             font-size: 1.4rem;
         }
 
-        .quick-list {
+        .key-points {
             display: grid;
-            gap: 10px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
         }
 
-        .quick-list li {
+        .key-point {
             background: white;
-            padding: 12px 16px;
-            border-radius: 6px;
-            border-left: 3px solid #ffc107;
-            list-style: none;
-            font-weight: 500;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #2c5aa0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .key-point h3 {
+            color: #2c5aa0;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
         }
 
         .content-section {
@@ -127,101 +131,12 @@
 
         .content-section h3 {
             color: #1e3a5f;
-            font-size: 1.3rem;
-            margin: 30px 0 20px 0;
-        }
-
-        .content-section h4 {
-            color: #2c5aa0;
-            font-size: 1.1rem;
-            margin: 25px 0 15px 0;
-            font-weight: 600;
-        }
-
-        .scenario-box {
-            background: #f8f9fa;
-            border: 2px solid #e9ecef;
-            border-radius: 8px;
-            padding: 25px;
-            margin: 25px 0;
-        }
-
-        .scenario-box h3 {
-            color: #495057;
             font-size: 1.2rem;
-            margin-bottom: 15px;
-            margin-top: 0;
+            margin: 25px 0 15px 0;
         }
 
-        .rights-list {
-            background: #e8f5e8;
-            border-left: 5px solid #28a745;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 8px;
-        }
-
-        .rights-list h4 {
-            color: #155724;
-            margin-bottom: 15px;
-            margin-top: 0;
-        }
-
-        .miranda-rights {
-            background: #fff0f0;
-            border: 2px solid #f8d7da;
-            border-radius: 8px;
-            padding: 25px;
-            margin: 25px 0;
-        }
-
-        .miranda-rights h4 {
-            color: #721c24;
-            margin-bottom: 15px;
-            margin-top: 0;
-        }
-
-        .miranda-rights ul {
-            margin-left: 20px;
-        }
-
-        .miranda-rights li {
-            margin-bottom: 10px;
-            color: #721c24;
-        }
-
-        .warning-box {
-            background: #f8d7da;
-            border: 1px solid #f5c6cb;
-            border-radius: 8px;
-            padding: 20px;
-            margin: 25px 0;
-        }
-
-        .warning-box h4 {
-            color: #721c24;
-            margin-bottom: 10px;
-        }
-
-        .warning-box p {
-            color: #721c24;
-        }
-
-        .tip-box {
-            background: #d4edda;
-            border: 1px solid #c3e6cb;
-            border-radius: 8px;
-            padding: 20px;
-            margin: 25px 0;
-        }
-
-        .tip-box h4 {
-            color: #155724;
-            margin-bottom: 10px;
-        }
-
-        .tip-box p {
-            color: #155724;
+        .rights-category {
+            margin-bottom: 35px;
         }
 
         ul {
@@ -237,28 +152,154 @@
             color: #1e3a5f;
         }
 
-        em {
-            color: #2c5aa0;
-            font-style: italic;
-        }
-
-        .source-link {
-            background: #f8f9fa;
-            border: 1px solid #dee2e6;
+        .highlight-box {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
             border-radius: 8px;
             padding: 20px;
-            margin-top: 30px;
+            margin: 25px 0;
+        }
+
+        .highlight-box h4 {
+            color: #856404;
+            margin-bottom: 10px;
+        }
+
+        .warning-box {
+            background: #f8d7da;
+            border: 1px solid #f5c6cb;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 25px 0;
+        }
+
+        .warning-box h4 {
+            color: #721c24;
+            margin-bottom: 10px;
+        }
+
+        .tips-section {
+            background: #343a40;
+            color: white;
+            padding: 40px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+        }
+
+        .tips-section h2 {
+            color: white;
             text-align: center;
+            margin-bottom: 30px;
         }
 
-        .source-link a {
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .tip-card {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .tip-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 15px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            border: 3px solid #dc3545;
+            position: relative;
+        }
+
+        .tip-icon::after {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            border: 3px solid #dc3545;
+            border-radius: 50%;
+            transform: rotate(45deg);
+        }
+
+        .tip-card h4 {
+            color: #dc3545;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .resource-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border: 2px solid #e9ecef;
+            transition: all 0.3s ease;
+        }
+
+        .resource-card:hover {
+            border-color: #2c5aa0;
+            transform: translateY(-2px);
+        }
+
+        .resource-card h4 {
             color: #2c5aa0;
-            text-decoration: none;
-            font-weight: 500;
+            margin-bottom: 10px;
         }
 
-        .source-link a:hover {
+        .resource-card a {
+            color: #2c5aa0;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .resource-card a:hover {
             text-decoration: underline;
+        }
+
+        .miranda-rights {
+            background: #d1ecf1;
+            border: 1px solid #bee5eb;
+            border-radius: 8px;
+            padding: 25px;
+            margin: 25px 0;
+        }
+
+        .miranda-rights h4 {
+            color: #0c5460;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+
+        .miranda-rights ul {
+            margin-left: 0;
+            list-style: none;
+        }
+
+        .miranda-rights li {
+            padding-left: 25px;
+            position: relative;
+            margin-bottom: 10px;
+        }
+
+        .miranda-rights li::before {
+            content: "•";
+            color: #0c5460;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
         }
 
         @media (max-width: 768px) {
@@ -276,8 +317,8 @@
                 padding: 30px 20px;
             }
 
-            .scenario-box, .rights-list, .miranda-rights {
-                padding: 20px 15px;
+            .tips-grid, .key-points, .resources-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -287,141 +328,191 @@
         <div class="container">
             <div class="header-content">
                 <a href="../index.html" class="back-link">← Back to Resources</a>
-                <h1>Know Your Rights with Police</h1>
+                <h1>Your Rights When Stopped by Police</h1>
             </div>
         </div>
     </header>
 
     <main>
         <div class="container">
-            <section class="important-reminder">
-                <h2>🔑 Most Important Thing to Remember</h2>
-                <p><strong>Always ask to speak to a lawyer.</strong> You have the right to remain silent and the right to an attorney. Use these rights!</p>
-            </section>
 
-            <section class="quick-reference">
-                <h2>⚡ Quick Reference - Your Rights</h2>
-                <ul class="quick-list">
-                    <li>You have the right to remain silent (except for providing your name and address when required)</li>
-                    <li>You cannot be penalized for refusing to answer questions</li>
-                    <li>You have the right to ask "Am I free to leave?"</li>
-                    <li>You have the right to refuse searches (except with a warrant or probable cause)</li>
-                    <li>If arrested, you have the right to an attorney before questioning</li>
-                    <li>Never lie to police - but you don't have to answer their questions</li>
-                </ul>
+            <section class="quick-resources">
+                <h2>🚨 Know Your Basic Rights</h2>
+                <div class="key-points">
+                    <div class="key-point">
+                        <h3>Right to Remain Silent</h3>
+                        <p>You are not required to answer questions beyond providing your name, address, and date of birth when stopped.</p>
+                    </div>
+                    <div class="key-point">
+                        <h3>Right to Refuse Searches</h3>
+                        <p>You can clearly state "I do not consent to a search" unless they have a warrant or probable cause.</p>
+                    </div>
+                    <div class="key-point">
+                        <h3>Right to Leave</h3>
+                        <p>Ask "Am I being detained or am I free to leave?" You can leave if you're not being detained.</p>
+                    </div>
+                    <div class="key-point">
+                        <h3>Right to an Attorney</h3>
+                        <p>Always ask to speak to a lawyer before answering any questions about a crime.</p>
+                    </div>
+                </div>
             </section>
 
             <section class="content-section">
-                <h2>If You Are Stopped by Police</h2>
+                <h2>What Happens When Police Stop You?</h2>
                 
-                <div class="scenario-box">
-                    <h3>🚶‍♂️ Police Approach and Question You</h3>
-                    <p>Police have the power to approach people and ask questions. <strong>Being approached does not mean you're suspected of a crime.</strong> Citizens are encouraged to cooperate, but with one exception (providing name and address when legally required), you have no legal duty to answer questions.</p>
+                <div class="rights-category">
+                    <h3>Police Powers During a Stop</h3>
+                    <p>Police have the authority to investigate suspected crimes and maintain community safety. They can approach and question people, but simply being questioned doesn't mean you're suspected of a crime. Understanding when you must comply versus when you can exercise your rights is crucial.</p>
                     
-                    <div class="rights-list">
-                        <h4>Your Rights During Police Contact:</h4>
+                    <div class="highlight-box">
+                        <h4>🔍 What Police Can Do</h4>
                         <ul>
-                            <li>You have the <strong><em>right of silence</em></strong> - you may refuse to answer questions</li>
-                            <li>You can ask "Am I free to leave?" If yes, you can walk away</li>
-                            <li>You should never lie to police (this can be charged as "obstructing official business")</li>
-                            <li>Stay calm and keep your hands visible</li>
+                            <li>Stop and ask questions if they believe you witnessed or have information about a crime</li>
+                            <li>Detain you if there's a warrant for your arrest</li>
+                            <li>Detain you if they have "reasonable suspicion" you committed, are committing, or are about to commit a crime</li>
+                            <li>Request identification if you're driving a motor vehicle</li>
+                        </ul>
+                    </div>
+
+                    <div class="warning-box">
+                        <h4>⚖️ Your Obligation</h4>
+                        <p><strong>In Ohio, you must provide:</strong></p>
+                        <ul>
+                            <li>Your name, address, and date of birth when lawfully stopped</li>
+                            <li>Driver's license if you're operating a motor vehicle</li>
+                        </ul>
+                        <p><strong>Failure to provide this information can result in:</strong></p>
+                        <ul>
+                            <li>Misdemeanor charges (up to 30 days in jail and/or fine up to $250 for those 18+)</li>
+                            <li>Fine up to $100 and juvenile detention for those under 18</li>
                         </ul>
                     </div>
                 </div>
 
-                <div class="tip-box">
-                    <h4>💡 What to Say</h4>
-                    <p>"I am exercising my right to remain silent. I want to speak to a lawyer." Then stay quiet and don't answer questions.</p>
-                </div>
+                <div class="rights-category">
+                    <h3>Your Rights During the Stop</h3>
+                    
+                    <h4>Identification Requirements</h4>
+                    <p>Unless you are driving, you are <strong>not required</strong> to show police your identification, and you are not required to tell them anything beyond your name, address, and date of birth.</p>
 
-                <div class="warning-box">
-                    <h4>⚠️ Important</h4>
-                    <p>You <strong>cannot be penalized</strong> for refusing to answer questions. Don't let anyone tell you that staying silent "makes you look guilty."</p>
-                </div>
-            </section>
+                    <h4>Right to Leave</h4>
+                    <p>If you are stopped by police, ask loudly and clearly: <strong>"Am I being detained or am I free to leave?"</strong> If the officer says you are free to leave, stay calm and walk away. You can ask if you are free to leave more than once during an encounter. If the officer says you are under arrest, you have the right to know why.</p>
 
-            <section class="content-section">
-                <h2>If You Are Arrested</h2>
-                
-                <p>If you are arrested, you have several important rights that police must respect:</p>
+                    <h4>Right to Remain Silent</h4>
+                    <p>You do not have to answer any questions beyond providing your name, address, and date of birth. You do not have to give a statement or provide any information about something you witnessed or are suspected of doing. <strong>You have the right to remain silent even if you have not been read your Miranda rights.</strong></p>
 
-                <h3>🔍 Right to Know Why You're Arrested</h3>
-                <ul>
-                    <li>You have the right to be told <strong>why you are being arrested</strong></li>
-                    <li>You have the right to know <strong>the nature of the charges</strong> against you</li>
-                    <li>Police must tell you what crime you're being arrested for</li>
-                </ul>
+                    <div class="warning-box">
+                        <h4>🚫 Never Lie to Police</h4>
+                        <p>While you have the right to remain silent, <strong>never lie to law enforcement</strong>. Lying to police can result in charges for "obstructing official business." If you don't want to answer questions, simply state: "I choose to remain silent."</p>
+                    </div>
 
-                <div class="miranda-rights">
-                    <h4>📜 Your Miranda Rights</h4>
-                    <p>Before being questioned following your arrest, you must be told your constitutional rights:</p>
+                    <h4>Right to Refuse Searches</h4>
+                    <p>You do not have to agree to a search. If you do not want your person or belongings searched, you should state loudly and clearly: <strong>"I do not consent to a search."</strong> If you do not consent to a search, police cannot conduct a search, but they can protect themselves by conducting a "pat-down" search to check for weapons without your consent.</p>
+
+                    <p><strong>Exceptions to this rule:</strong></p>
                     <ul>
-                        <li><strong>The right to remain silent</strong> and not answer any questions</li>
-                        <li><strong>The right to know</strong> that if you give up your right to remain silent and do answer questions, police can use your answers against you in court</li>
-                        <li><strong>The right to stop answering questions</strong> at any time and talk with an attorney, even if you have begun to answer questions</li>
-                        <li><strong>The right to speak privately with an attorney</strong> before answering any questions or signing anything</li>
-                        <li><strong>The right to have an attorney appointed</strong> at no cost if you cannot afford one (for crimes that carry possible jail time)</li>
+                        <li>Police can search your vehicle if they have probable cause to believe it contains drugs, contraband, or criminal evidence</li>
+                        <li>Police can conduct a search with a warrant signed by a judge</li>
+                        <li>Police must provide you with a copy of any search warrant</li>
                     </ul>
                 </div>
-
-                <h3>📞 Communication Rights</h3>
-                <ul>
-                    <li>Right to contact a responsible person to tell them you've been arrested and what the charges are</li>
-                    <li><strong>You are not limited to one phone call</strong> - you can make more calls if needed to reach someone</li>
-                </ul>
-
-                <h3>🧪 Testing and Procedures</h3>
-                <p>You have the right to refuse certain tests until you can talk to your lawyer:</p>
-                <ul>
-                    <li>Polygraph ("lie detector") tests</li>
-                    <li>Breathalyzer or intoxilizer tests</li>
-                    <li>Field sobriety tests (walking straight line, other physical movements)</li>
-                    <li>Eye tests ("look-at-the-pen test")</li>
-                    <li>Mental ability tests (reciting alphabet, doing math)</li>
-                </ul>
-
-                <h3>👥 Identification Procedures</h3>
-                <ul>
-                    <li>You have the right to have your attorney present at any line-up</li>
-                    <li>You have the right to have your attorney present during other identification procedures where possible eyewitnesses view you</li>
-                </ul>
-
-                <h3>🏛️ Court and Bail Rights</h3>
-                <ul>
-                    <li><strong>Right to reasonable bail or bond</strong> to secure your release (unless charged with a capital crime)</li>
-                    <li>Usually a judge sets bail; for misdemeanors, police may accept bail at headquarters if no judge is available</li>
-                    <li><strong>Right to be brought before a court</strong> as soon as reasonably practicable after arrest</li>
-                    <li>Right to request a preliminary hearing to test the basis of your arrest</li>
-                    <li>Right to trial to determine guilt or innocence</li>
-                </ul>
             </section>
 
             <section class="content-section">
-                <h2>Important Reminders</h2>
+                <h2>Your Rights If You Are Arrested</h2>
 
-                <div class="warning-box">
-                    <h4>🚨 Always Ask for a Lawyer</h4>
-                    <p>If you try to cooperate by answering questions while in police custody, you may create difficulties for your lawyer in defending you. <strong>Always ask to speak to a lawyer first.</strong></p>
+                <div class="rights-category">
+                    <h3>Before Questioning</h3>
+                    <p>An officer who wants to ask you questions other than your name and address must advise you that you have a right not to answer the questions.</p>
+
+                    <h3>Right to Know Why You're Arrested</h3>
+                    <p>You have the right to be told why you are being arrested and the nature of the charges against you (the crime for which you are being arrested).</p>
+
+                    <div class="miranda-rights">
+                        <h4>🔒 Your Miranda Rights</h4>
+                        <p>You have the right to be told your constitutional rights before being questioned following your arrest:</p>
+                        <ul>
+                            <li>The right to remain silent and not answer any questions</li>
+                            <li>The right to know that if you waive (give up) your right to remain silent and do answer questions, the police can use your answers against you in court</li>
+                            <li>The right to stop answering questions at any time and talk with an attorney, even if you have begun to answer questions</li>
+                            <li>The right to speak privately with an attorney before answering any questions or signing anything</li>
+                            <li>If you cannot afford an attorney and if the crime has jail time as a possible penalty, you have a right to have an attorney appointed at no cost before being questioned</li>
+                        </ul>
+                    </div>
+
+                    <div class="highlight-box">
+                        <h4>⚖️ Important: Always Ask for a Lawyer</h4>
+                        <p>You <strong>cannot be penalized</strong> for refusing to answer questions. If you try to cooperate by answering questions while in police custody, you may create difficulties for your lawyer in defending you. <strong>Always ask to speak to a lawyer.</strong></p>
+                    </div>
+
+                    <h3>Additional Rights When Arrested</h3>
+                    <ul>
+                        <li><strong>Contact someone:</strong> Right to contact a responsible person by telephone to tell them you've been arrested and what the charges are. You are not limited to one phone call.</li>
+                        <li><strong>Refuse tests:</strong> Right to refuse physical or chemical tests (polygraph, breathalyzer, field sobriety tests, etc.) until you can talk to your lawyer.</li>
+                        <li><strong>Attorney at lineup:</strong> Right to have your attorney present at any lineup or identification procedure.</li>
+                        <li><strong>Reasonable bail:</strong> Right to reasonable bail or bond unless charged with a capital crime.</li>
+                        <li><strong>Court appearance:</strong> Right to be brought before a court as soon as reasonably practicable for a preliminary hearing.</li>
+                    </ul>
                 </div>
-
-                <div class="tip-box">
-                    <h4>🤝 Stay Calm and Respectful</h4>
-                    <p>Even while exercising your rights, remain calm and respectful. Don't resist physically, even if you believe the arrest is wrong. Address legal issues in court, not on the street.</p>
-                </div>
-
-                <h3>Key Points to Remember:</h3>
-                <ul>
-                    <li><strong>Silence is not guilt</strong> - you cannot be penalized for exercising your rights</li>
-                    <li><strong>Never lie</strong> - but you don't have to answer questions</li>
-                    <li><strong>Ask for a lawyer immediately</strong> if arrested</li>
-                    <li><strong>Don't sign anything</strong> without speaking to an attorney first</li>
-                    <li><strong>Remember details</strong> - write down what happened as soon as you can</li>
-                </ul>
             </section>
 
-            <div class="source-link">
-                <p><strong>Source:</strong> <a href="https://www.ohiobar.org/public-resources/commonly-asked-law-questions-results/law-facts/law-facts-your-rights-if-questioned-stopped-or-arrested-by-the-police/" target="_blank" rel="noopener">Ohio State Bar Association - Your Rights If Questioned, Stopped, or Arrested by Police</a></p>
-            </div>
+            <section class="tips-section">
+                <h2>Tips for Any Police Interaction</h2>
+                <div class="tips-grid">
+                    <div class="tip-card">
+                        <div class="tip-icon">🏃</div>
+                        <h4>Do not run</h4>
+                        <p>Stay calm and be aware of your emotions, voice, and body language.</p>
+                    </div>
+                    <div class="tip-card">
+                        <div class="tip-icon">⚖️</div>
+                        <h4>Do not argue</h4>
+                        <p>A stop or arrest is not the time to argue guilt or innocence. That can be addressed later in court.</p>
+                    </div>
+                    <div class="tip-card">
+                        <div class="tip-icon">✋</div>
+                        <h4>Do not touch or reach</h4>
+                        <p>Keep your hands where police can see them.</p>
+                    </div>
+                    <div class="tip-card">
+                        <div class="tip-icon">✊</div>
+                        <h4>Do not resist</h4>
+                        <p>Even if you didn't do anything, resisting can lead to further criminal charges, injury, or death.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2>What to Do If Police Violate Your Rights</h2>
+                
+                <p>If you are stopped, you can ask the police why they stopped you, but the police are not required to answer that question. You should say out loud, in your clearest voice, so that your goal is to de-escalate the situation, and that you will follow the officer's commands.</p>
+
+                <div class="highlight-box">
+                    <h4>📹 Document Everything</h4>
+                    <p>The safest thing to do is to continue complying with the officer's commands. You should ask the officer if the encounter is being recorded on a bodycam or dashcam. If it is not being recorded, you can ask the officer to turn on their camera. Say out loud the things that you and the police are doing so your narration is recorded on the video.</p>
+                </div>
+
+                <p><strong>After the encounter:</strong> Write down or record everything you remember about what happened as soon as possible. It is important to make a record of what happened as soon as you can.</p>
+
+                <div class="resources-grid">
+                    <div class="resource-card">
+                        <h4>Ohio Bar Association</h4>
+                        <p>Legal information and resources</p>
+                        <a href="https://www.ohiobar.org/my-ohio-rights/" target="_blank">Visit OhioBar.org</a>
+                    </div>
+                    <div class="resource-card">
+                        <h4>ACLU of Ohio</h4>
+                        <p>Know your rights resources</p>
+                        <a href="https://www.acluohio.org/" target="_blank">Visit ACLU Ohio</a>
+                    </div>
+                    <div class="resource-card">
+                        <h4>Ohio Legal Help</h4>
+                        <p>Free legal assistance resources</p>
+                        <a href="https://www.ohiolegalhelp.org/" target="_blank">Get Legal Help</a>
+                    </div>
+                </div>
+            </section>
         </div>
     </main>
 </body>
